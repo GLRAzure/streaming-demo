@@ -1,0 +1,21 @@
+{
+    "Name": "sensordata",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "streamingdemo",
+        "SharedAccessPolicyName": "listenerpolicy",
+        "EventHubName": "streaming",
+        "ConsumerGroupName": "streamanalytics",
+        "SharedAccessPolicyKey": null
+    },
+    "PartitionKey": null,
+    "DataSourceCredentialDomain": "fe53b05b-21da-442c-bd40-b2e6054904e7.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "FieldDelimiter": null
+    },
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

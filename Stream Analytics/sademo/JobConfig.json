@@ -1,0 +1,17 @@
+{
+    "ScriptType": "JobConfig",
+    "DataLocale": "en-US",
+    "OutputErrorPolicy": "Retry",
+    "EventsLateArrivalMaxDelayInSeconds": 5,
+    "EventsOutOfOrderMaxDelayInSeconds": 0,
+    "EventsOutOfOrderPolicy": "Adjust",
+    "StreamingUnits": 3,
+    "CompatibilityLevel": "1.1",
+    "UseSystemAssignedIdentity": false,
+    "GlobalStorage": {
+        "AccountName": null,
+        "AccountKey": null
+    },
+    "DataSourceCredentialDomain": null,
+    "Tags": {}
+}

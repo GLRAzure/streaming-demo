@@ -2,6 +2,10 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "sademo",
+			"path": "Stream Analytics\\sademo"
 		}
 	],
 	"settings": {}

@@ -1,0 +1,10 @@
+SELECT city, room, sensor, AVG(value) as value, System.Timestamp() as TimeReceived 
+INTO    [sqloutput]   
+FROM [sensordata]  
+GROUP BY city, room, sensor, TumblingWindow(minute,5) 
+
+/*
+Select *
+INTO [powerbi]
+From [sensordata]
+*/

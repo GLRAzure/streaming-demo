@@ -1,0 +1,15 @@
+{
+    "Name": "sqloutput",
+    "DataSourceType": "SQL Database",
+    "SQLDatabaseProperties": {
+        "Server": "streamingdemo.database.windows.net",
+        "Database": "streaming",
+        "User": "hginsburg",
+        "Table": "sensordata",
+        "MaxBatchCount": 10000,
+        "MaxWriterCount": 1,
+        "Password": null
+    },
+    "DataSourceCredentialDomain": null,
+    "ScriptType": "Output"
+}
