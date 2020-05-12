@@ -1,1 +1,1 @@
-# streaming-dmo
+# streaming-demo
