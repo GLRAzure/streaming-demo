@@ -24,7 +24,7 @@
       
       ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-devices.png)
       
-      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-device-keys.png)
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-device-keys-2.png)
       
       Once you have the Primary Connection String for each of the two devices, concatenate both connection strings with a comma in between. This is what you will use in the IoTDeviceSimulator.
       
