@@ -73,8 +73,24 @@
     * Stream Analytics job
     
       * Input
+      
+      Add an input that points to the device telemetry from IoT Hub.
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/sa-input.png)
+      
       * Output
+      
+      Add two outputs: one that points to a Power BI streaming dataset and another that points to an Azure SQL DB.
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/sa-powerbi-output.png)
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/sa-sql-output.png)
+      
       * Query
+      
+      Add the following query to link the input with the two outputs:
+      
+      Query location: `Stream Analytics/sademo/Transformation.asaql`
       
     * Databricks
     
