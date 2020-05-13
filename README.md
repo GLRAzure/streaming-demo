@@ -20,14 +20,15 @@
 			
       * Provision a minimum of two devices and Primary Connection String
       
-      IMG placeholder (iot-devices)
-      IMG placeholder (iot-SAS keys)
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-devices.png)
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-device-keys.png)
       
       Once you have the Primary Connection String for each of the two devices, concatenate both connection strings with a comma in between. This is what you will use in the IoTDeviceSimulator.
       
       * Copy Event Hub compatible endpoint
       
-      IMG placeholder (iot-event-hub)
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-event-hub.png)
       
       * Add route(s)
       
@@ -37,13 +38,13 @@
       
       First, add a custom Storage endpoint and configure the following options.
       
-      IMG placeholder (storage-endpoint)
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/storage-endpoint.png)
       
       2. To the default events endpoint
       
       After adding both routes, you should see something similar to in your Message routing.
       
-      IMG placeholder (iot-routes)
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-routes.png)
       
     * Azure SQL DB
     
