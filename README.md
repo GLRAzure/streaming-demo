@@ -8,11 +8,13 @@
 	
 	After deploying the template, you should see the following resources:
 	
-	
+	![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/template-resources.png)
 
     * Storage Account
 			
-      * Create container "demo"
+      * Create a container called "demo"
+      
+      For help creating a container in a storage account, reference the [Microsoft documentation here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
       
     * IoT Hub
 			
