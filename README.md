@@ -54,8 +54,21 @@
       
     * Azure SQL DB
     
-      * Add client IP to firewall rules
-      * Create table
+      * If necessary, add your client IP Address to the server firewall rules and open the Query Editor
+
+      Please note that the Azure SQL Database is provisioned as serverless to help minimize costs. You may experience a brief delay when first interacting with the resource as it warms up.
+
+      * Create table using this script:
+
+		```
+		CREATE TABLE [dbo].[sensordata](
+			[city] [varchar](255) NOT NULL,
+			[room] [varchar](255) NOT NULL,
+			[sensor] [varchar](255) NOT NULL,
+			[value] [decimal](18, 3) NOT NULL,
+			[TimeReceived] [datetime2](7) NOT NULL
+		)
+		```
       
     * Stream Analytics job
     
