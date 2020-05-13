@@ -2,6 +2,14 @@
 
 1. Provision resources using ARM template and configure (order matters):
 
+	From the Azure portal, [deploy resources from provided template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template). 
+	
+	Template location: `deploy-template/DeployStreamingTemplate.json`.
+	
+	After deploying the template, you should see the following resources:
+	
+	
+
     * Storage Account
 			
       * Create container "demo"
