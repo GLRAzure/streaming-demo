@@ -28,6 +28,10 @@
       
       Once you have the Primary Connection String for each of the two devices, concatenate both connection strings with a comma in between. This is what you will use in the IoTDeviceSimulator.
       
+      Your concatenated connection strings will look like this:
+      
+      `HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>,HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>`
+      
       * Copy Event Hub compatible endpoint
       
       ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-event-hub.png)
