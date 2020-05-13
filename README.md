@@ -94,7 +94,11 @@
       
     * Databricks
     
-      * Notebook
+      * Create cluster
+      * Import Notebook
+      * Add Maven coordinate for Event Hubs compatibility
+      * Create Key Vault-backed secret scope
+      * Create dashboard
 			
 2. Download repo and update C# with Connection String(s)
 	
