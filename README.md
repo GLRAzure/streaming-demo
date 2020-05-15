@@ -109,9 +109,13 @@
       
       Add this Maven coordinate for compatibility with IoT Hub: `com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.6`
       
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-maven.png)
+      
       * Import Notebook and run all cells
       
       Import the DBC archive notebook located at this location: `notebooks/Streaming Demo.dbc`
+      
+      After running the cells, select `View: Streaming Dashboard`.
 			
 2. Download repo and update C# with Connection String(s)
 	
