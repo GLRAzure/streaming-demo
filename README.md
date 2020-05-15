@@ -8,7 +8,7 @@
 	
 	After deploying the template, you should see the following resources:
 	
-	![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/template-resources.png)
+	![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/template-resources-01.png)
 	
 	For each of the provisioned resources, configure the following:
 
