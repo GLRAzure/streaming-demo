@@ -44,6 +44,11 @@
             "minLength": 3,
             "maxLength": 24
         },
+        "KeyVaultName": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 24
+        },
         "sqlServerName": {
             "type": "string",
             "minLength": 3,
@@ -262,6 +267,24 @@
             "properties": {
                 "startIpAddress": "0.0.0.0",
                 "endIpAddress": "0.0.0.0"
+            }
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults",
+            "apiVersion": "2016-10-01",
+            "name": "[parameters('KeyVaultName')]",
+            "location": "eastus",
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "standard"
+                },
+                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                "accessPolicies": [ ],
+                "enabledForDeployment": false,
+                "enabledForDiskEncryption": false,
+                "enabledForTemplateDeployment": false,
+                "enableSoftDelete": true
             }
         }
     ]
