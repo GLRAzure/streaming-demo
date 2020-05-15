@@ -34,8 +34,18 @@ namespace IoTDeviceSimulator
                 var room = ROOMS[rnd.Next(0, ROOMS.Length)];
                 var sensor = SENSORS[rnd.Next(0, SENSORS.Length)];
                 var city = CITIES[rnd.Next(0, CITIES.Length)];
-                var value = rnd.NextDouble() * 10.0;
+                double value = 0.0;
+                //var value = rnd.NextDouble() * 10.0;
+                // This will smooth out the results
+                double rand = rnd.NextDouble() * 10.0;
+                if (rand >= 9.0){
+                    
+                    value = rand;
 
+                } else {
+                    value = rand / 3;
+                }
+                    
                 //Build the payload and convert it to json.
                 MessagePayload payload = new MessagePayload(room, sensor, city, value);
                 var message = JsonSerializer.Serialize<MessagePayload>(payload);
