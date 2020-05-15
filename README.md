@@ -36,6 +36,8 @@
       
       ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-event-hub.png)
       
+      Add this Event Hub compatible endpoint to your Key Vault with the secret name `eventhubsreader`.
+      
       * Add route(s)
       
       Add two routes:  
@@ -94,10 +96,22 @@
       
     * Databricks
     
-      * Create cluster
-      * Import Notebook
-      * Add Maven coordinate for Event Hubs compatibility
-      * Create dashboard
+    
+      * Create a Key Vault-backed secret scope
+      
+      Follow the instructions located here to [add a secret scope backed by Azure Key Vault](https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope).
+      
+      * Create cluster and add a Maven coordinate
+      
+      Create a new cluster with similar configurations:
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-cluster.png)
+      
+      Add this Maven coordinate for compatibility with IoT Hub: `com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.6`
+      
+      * Import Notebook and run all cells
+      
+      Import the DBC archive notebook located at this location: `notebooks/Streaming Demo.dbc`
 			
 2. Download repo and update C# with Connection String(s)
 	
