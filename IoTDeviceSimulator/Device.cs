@@ -35,15 +35,23 @@ namespace IoTDeviceSimulator
                 var sensor = SENSORS[rnd.Next(0, SENSORS.Length)];
                 var city = CITIES[rnd.Next(0, CITIES.Length)];
                 double value = 0.0;
-                //var value = rnd.NextDouble() * 10.0;
-                // This will smooth out the results
-                double rand = rnd.NextDouble() * 10.0;
-                if (rand >= 9.0){
-                    
+                
+                // Simulate data within certain ranges based on room
+                if (room == "living-room"){
+                    double rand = rnd.NextDouble() * (3.0-1.0) + 1.0;
                     value = rand;
-
-                } else {
-                    value = rand / 3;
+                }
+                else if (room == "dining-room"){
+                    double rand = rnd.NextDouble() * (5.0-3.0) + 3.0;
+                    value = rand;
+                }
+                else if (room == "family-room"){
+                    double rand = rnd.NextDouble() * (8.0-5.0) + 5.0;
+                    value = rand;
+                }
+                else {
+                    double rand = rnd.NextDouble() * (10.0-8.0) + 8.0;
+                    value = rand;
                 }
                     
                 //Build the payload and convert it to json.
