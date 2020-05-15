@@ -38,6 +38,10 @@
       
       Add this Event Hub compatible endpoint to your Key Vault with the secret name `eventhubsreader`.
       
+      After adding this Secret, your Key Vault will look similar to this:
+      
+      ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/kv-secret.png)
+      
       * Add route(s)
       
       Add two routes:  
@@ -120,4 +124,17 @@
 2. Download repo and update C# with Connection String(s)
 	
     * Set Environment Variable with device connection strings (concat with ",")
-    * dotnet build and then dotnet run
+    
+    Create a new system Environment Variable called: `IOTHUB_DEVICE_CONN_STRING`
+    
+    For it's value, add the concatenated connection strings for each of the devices you created earlier. It should look like this:
+    
+    `HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>,HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>`
+    
+    * Run the Device simulator
+    
+    Use `dotnet build` and then `dotnet run` from the `IoTDeviceSimulator` directory.
+    
+    You should see output similar to this after running the device simulator:
+    
+    ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/device-output.png)
