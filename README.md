@@ -2,6 +2,10 @@
 
 This repository contains assets for quickly building out an end-to-end streaming demo that can serve as a foundation for a PoC or MVP. Included in this repository is an ARM template for deploying the key resources in Azure and a data generator that simulates device telemetry data. Below is more detailed documentation for configuring resources after they have been deployed in Azure.
 
+# Solution Architecture
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/stream-architecture.png)
+
 # Provision and configure resources using ARM template
 
 From the Azure portal, [deploy resources from provided template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template). 
