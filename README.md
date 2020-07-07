@@ -120,11 +120,11 @@ Add this Maven coordinate for compatibility with IoT Hub: `com.microsoft.azure:a
 
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-maven.png)
 
-* Import Notebook and run all cells
+* Import Notebook
 
 Import the DBC archive notebook located at this location: `notebooks/Streaming Demo.dbc`
 
-After running the cells, select `View: Streaming Dashboard`.
+**Important:** After importing the notebook, move on to setting up the IoTDeviceSimulator. Before running the cells in this notebook, be sure the device simulator is up-and-running, sending data to the Event Hub.
 			
 ## Run the IoTDeviceSimulator
 	
@@ -143,3 +143,7 @@ Use `dotnet build` and then `dotnet run` from the `IoTDeviceSimulator` directory
 You should see output similar to this after running the device simulator:
 
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/device-output.png)
+
+Once you are seeing this output, go back to the Databricks notebook and run all of the cells in the notebook.
+
+After running the cells, select `View: Streaming Dashboard`.
