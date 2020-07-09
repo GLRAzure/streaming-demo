@@ -165,4 +165,4 @@ Open PowerBI, you'll notice the streamingdata Dataset in the left nav.  Add the 
 
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/PBIMockStream.png)
 
-## Once you create the Streaming Dashboard, and verify data is being populated in yoru storage account and SQL DB, the exercise is complete!
+## Once you create the Streaming Dashboard, and verify data is being populated in your storage account and SQL DB, the exercise is complete!
