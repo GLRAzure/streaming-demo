@@ -38,6 +38,10 @@ Your concatenated connection strings will look like this:
 
 `HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>,HostName=<IOT-HUB-NAME>.azure-devices.net;DeviceId=<DEVICE-ID>;SharedAccessKey=<KEY>`
       
+* Create a Consumer Group (example below is "databricks") in Built-in Endpoints
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/consumergroup.png)
+
 * Copy Event Hub compatible endpoint
       
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-event-hub.png)
@@ -103,29 +107,7 @@ Add two outputs: one that points to a Power BI streaming dataset and another tha
 Add the following query to link the input with the two outputs:
 
 Query location: `Stream Analytics/sademo/Transformation.asaql`
-      
-## Databricks
 
-* Create a Key Vault-backed secret scope
-
-Follow the instructions located here to [add a secret scope backed by Azure Key Vault](https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope).
-
-* Create cluster and add a Maven coordinate
-
-Create a new cluster with similar configurations:
-
-![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-cluster.png)
-
-Add this Maven coordinate for compatibility with IoT Hub: `com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.6`
-
-![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-maven.png)
-
-* Import Notebook
-
-Import the DBC archive notebook located at this location: `notebooks/Streaming Demo.dbc`
-
-**Important:** After importing the notebook, move on to setting up the IoTDeviceSimulator. Before running the cells in this notebook, be sure the device simulator is up-and-running, sending data to the Event Hub.
-			
 ## Run the IoTDeviceSimulator
 	
 * Set Environment Variable with device connection strings (concat with ",")
@@ -144,6 +126,43 @@ You should see output similar to this after running the device simulator:
 
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/device-output.png)
 
+* Return to the azure portal and your Streaming Job and start it.
+      
+## Databricks
+
+* Create a Key Vault-backed secret scope
+
+
+Follow the instructions located here to [add a secret scope backed by Azure Key Vault](https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope).  (Note: Manage Principal in the secret scope must be Creator, and you'll need a databricks premium account to do so. A Standard account will force you hardcode the secret in the code)
+
+* Create cluster and add a Maven coordinate
+
+Create a new cluster with similar configurations:
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-cluster.png)
+
+Add this Maven coordinate for compatibility with IoT Hub: `com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.6`
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/adb-maven.png)
+
+* Import Notebook
+
+Import the DBC archive notebook located at this location: `notebooks/Streaming Demo.dbc`
+
+After importing the notebook, run the cells in this notebook, be sure the device simulator is up-and-running, sending data to the Event Hub.
+			
+
+
 Once you are seeing this output, go back to the Databricks notebook and run all of the cells in the notebook.
 
 After running the cells, select `View: Streaming Dashboard`.
+
+Return to your Streaming Analytics overview page and you should see the following inputs and output metrics
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/streamingmetricoverview.png)
+
+Open PowerBI, you'll notice the streamingdata Dataset in the left nav.  Add the dataset, filter the fields (city and room in the example below).
+
+![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/PBIMockStream.png)
+
+## Once you create the Streaming Dashboard, and verify data is being populated in yoru storage account and SQL DB, the exercise is complete!
