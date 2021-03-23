@@ -26,7 +26,7 @@ For help creating a container in a storage account, reference the [Microsoft doc
       
 ## IoT Hub
 			
-* Provision a minimum of two devices and Primary Connection String
+:heavy_check_mark: Provision a minimum of two devices and Primary Connection String
       
 ![img](https://github.com/GLRAzure/streaming-demo/blob/master/img/iot-devices.png)
 
